@@ -18,7 +18,16 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  padding-top: 90px; 
+  min-height: 100vh;
+  padding-top: 90px;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+  margin-top: 20px;
 }
 
 .navbar {
@@ -76,8 +85,8 @@ body {
 }
 
 .sidebar {
-  width: 20%;
-  height: 800px;
+  width: 280px;
+  height: calc(100vh - 90px);
   background-color: #1a1a1a;
   padding: 20px;
   position: fixed;
@@ -85,8 +94,7 @@ body {
   overflow-y: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  margin-top: 43px;
-  margin-left: 240px;
+  margin-left: 20px;
 }
 
 .sidebar ul {
@@ -107,28 +115,18 @@ body {
 
 /* Main Content */
 .container {
-  margin-left: 35%;
-  width: 75%;
+  margin-left: 320px;
+  width: calc(100% - 340px);
   padding: 20px;
-  margin-right: 50px;
 }
 
-.content {
+.content, .content1 {
   background-color: #1a1a1a;
-  padding: 20px; 
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  width: 1000px; 
-  margin-top: 10px;
-}
-
-.content1 {
-  background-color: #1a1a1a;
-  padding: 20px; 
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  width: 1000px; 
-  margin-top: 50px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .intro-title {
@@ -373,14 +371,21 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
   .container {
-    margin-left: 0;
-    width: 100%;
-    padding: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
   }
 
   .sidebar {
-    display: none;
+    width: 100%;
+    height: auto;
+    position: static;
+    margin: 0 20px 20px 20px;
   }
 
   .content, .content1 {

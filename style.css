@@ -139,13 +139,11 @@ body {
   font-size: 4rem;
   margin-bottom: 1.5rem;
   background: linear-gradient(45deg, var(--accent) 30%, #ffffff 70%);
-  -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
 .content p {
